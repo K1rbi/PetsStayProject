@@ -1,0 +1,56 @@
+
+h2 {
+    background-color: #a4d3fa;
+}
+
+.navbar.navbar-default > .navbar-header > h1{
+    color: white;
+    padding-left: 25px;
+}
+
+.navbar.navbar-default{
+    background-color: #010C22; 
+}
+
+navbar-default .navbar-nav > li > a:link {
+    color: white;
+    font-weight: bold;
+}
+
+navbar-default .navbar-nav > li > a:hover {
+    color: #720543;
+    font-weight: bold;
+}
+
+navbar-default .navbar-nav > li > a:visited {
+    color: #616161;
+    font-weight: bold;
+}
+
+#pnlOwnerForm {
+    background-color: #a4d3fa;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#pnlPetForm {
+    background-color: #a4d3fa;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+ sup {
+     color: red;
+ }
+
+body{
+    background-color: #a4a0f6;
+}
+
+/*footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;*/ /* Height of the footer */
+    /*background: #6cf;
+}*/
