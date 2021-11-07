@@ -3,7 +3,7 @@ Imports System.Configuration
 
 Public Class WebForm1
     Inherits System.Web.UI.Page
-    Private strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\Database1.mdf';Integrated Security=True"
+
     Private dteNewEntrydate As New Date
     Private dteNewExitDate As New Date
 
@@ -214,45 +214,19 @@ Public Class WebForm1
 
         Dim strSQL As String = " SELECT id From tblCustomers WHERE [Name] = @name AND [Email] = @email AND [Phone] = @phone AND [Notes] = @notes"
 
-        Dim strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
-        Dim sqlCmd As SqlCommand
-        Dim sqlConn As New SqlConnection(strConn)
-        Dim sqlDA As New SqlDataAdapter
-        Dim ds As New DataSet
 
-        Try
+        Dim sqlCmd As New SqlCommand()
 
-            sqlConn.Open()
-            sqlCmd = New SqlCommand(strSQL, sqlConn)
 
-            With sqlCmd.Parameters
-                .AddWithValue("@Name", strOName)
-                .AddWithValue("@Phone", strOPhone)
-                .AddWithValue("@Email", strOEmail)
-                .AddWithValue("@Notes", strONotes)
-            End With
 
-            sqlDA.SelectCommand = sqlCmd
-            sqlDA.Fill(ds)
-
-            If ds.Tables(0).Rows.Count > 0 Then
-                Dim intID As Integer = ds.Tables(0).Rows(0).Item(0)
-
-                Session("BID") = intID
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("An eorror has ocoured processing", , "Error")
-
-        Finally
-
-            sqlDA.Dispose()
-            ds.Dispose()
-
-        End Try
-
+        With sqlCmd.Parameters
+            .AddWithValue("@Name", strOName)
+            .AddWithValue("@Phone", strOPhone)
+            .AddWithValue("@Email", strOEmail)
+            .AddWithValue("@Notes", strONotes)
+        End With
+        sqlCmd.CommandText = strSQL
+        Dim ds As DataSet = QueryDataTest(sqlCmd)
 
     End Sub
 
@@ -261,49 +235,21 @@ Public Class WebForm1
 
         Dim strSQL As String = " SELECT id From tblPets WHERE [Name] = @name AND [Breed] = @Breed AND [Location] = @Loc AND [Age] = @Age AND [Owner] = @Owner AND [Notes] = @Notes"
 
-        Dim strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
-        Dim sqlCmd As SqlCommand
-        Dim sqlConn As New SqlConnection(strConn)
-        Dim sqlDA As New SqlDataAdapter
-        Dim ds As New DataSet
 
-        Try
+        Dim sqlCmd As New SqlCommand()
 
-            sqlConn.Open()
-            sqlCmd = New SqlCommand(strSQL, sqlConn)
-
-            With sqlCmd.Parameters
-                .AddWithValue("@Name", strPName)
-                .AddWithValue("@Breed", strPBreed)
-                .AddWithValue("@Loc", strPlocation)
-                .AddWithValue("@Age", strPAge)
-                .AddWithValue("@Owner", strPOwner)
-                .AddWithValue("@Notes", strPNotes)
-                .AddWithValue("@Entery", dteNewEntrydate)
-                .AddWithValue("@Exit", dteNewExitDate)
-            End With
-
-            sqlDA.SelectCommand = sqlCmd
-            sqlDA.Fill(ds)
-
-            If ds.Tables(0).Rows.Count > 0 Then
-                Dim intID As Integer = ds.Tables(0).Rows(0).Item(0)
-
-                Session("PID") = intID
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("An eorror has ocoured processing , set session", , "Error")
-
-        Finally
-
-            sqlDA.Dispose()
-            ds.Dispose()
-
-        End Try
-
+        With sqlCmd.Parameters
+            .AddWithValue("@Name", strPName)
+            .AddWithValue("@Breed", strPBreed)
+            .AddWithValue("@Loc", strPlocation)
+            .AddWithValue("@Age", strPAge)
+            .AddWithValue("@Owner", strPOwner)
+            .AddWithValue("@Notes", strPNotes)
+            .AddWithValue("@Entery", dteNewEntrydate)
+            .AddWithValue("@Exit", dteNewExitDate)
+        End With
+        sqlCmd.CommandText = strSQL
+        Dim ds As DataSet = QueryDataTest(sqlCmd)
 
     End Sub
 

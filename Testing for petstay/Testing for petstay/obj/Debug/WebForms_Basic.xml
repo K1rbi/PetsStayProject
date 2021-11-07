@@ -118,9 +118,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Testing_for_petstay.Search._ddCatagory">
+<member name="F:Testing_for_petstay.Search._btnPets">
 <summary>
-ddCatagory control.
+btnPets control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._btnCustomers">
+<summary>
+btnCustomers control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -136,9 +145,162 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Testing_for_petstay.Search._txtPName">
+<summary>
+txtPName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitN">
+<summary>
+BtnPSubmitN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._txtPBreed">
+<summary>
+txtPBreed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitB">
+<summary>
+BtnPSubmitB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._ddlPLocationLetter">
+<summary>
+ddlPLocationLetter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._ddlPLocationNum">
+<summary>
+ddlPLocationNum control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitL">
+<summary>
+BtnPSubmitL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._txtPAge">
+<summary>
+txtPAge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitA">
+<summary>
+BtnPSubmitA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._ddlPOwner">
+<summary>
+ddlPOwner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitO">
+<summary>
+BtnPSubmitO control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._cldPEntery">
+<summary>
+cldPEntery control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._BtnPSubmitD">
+<summary>
+BtnPSubmitD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Testing_for_petstay.Search._srcCustomers">
 <summary>
 srcCustomers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._ddlOName">
+<summary>
+ddlOName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._PetStayData">
+<summary>
+PetStayData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.Search._btnOSearch">
+<summary>
+btnOSearch control.
 </summary>
 <remarks>
 Auto-generated field.

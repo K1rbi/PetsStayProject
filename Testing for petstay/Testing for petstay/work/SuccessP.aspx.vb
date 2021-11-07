@@ -55,7 +55,6 @@ Public Class SuccessP
 
     Private Function QueryData() As DataSet
 
-        Dim strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
         Dim sqlCmd As SqlCommand
         Dim sqlConn As New SqlConnection(strConn)
         Dim sqlDA As New SqlDataAdapter

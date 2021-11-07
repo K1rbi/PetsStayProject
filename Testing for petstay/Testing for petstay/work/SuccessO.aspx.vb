@@ -17,9 +17,13 @@ Public Class Success
         strBuilder.Append("<th class=""results"">Notes</th>")
         strBuilder.Append("</tr>")
 
+        'sql statement
+        Dim strSQL As String = "SElECT * FROM tblCustomers WHERE [ID] = " & Session("BID")
+        Dim sqlCmd As New SqlCommand()
+        sqlCmd.CommandText = strSQL
 
         'data
-        Dim ds As DataSet = QueryData()
+        Dim ds As DataSet = QueryDataTest(sqlCmd)
 
         For Each row As DataRow In ds.Tables(0).Rows
 
@@ -37,39 +41,38 @@ Public Class Success
 
     End Sub
 
-    Private Function QueryData() As DataSet
+    ''Private Function QueryData() As DataSet
 
-        Dim strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
-        Dim sqlCmd As SqlCommand
-        Dim sqlConn As New SqlConnection(strConn)
-        Dim sqlDA As New SqlDataAdapter
-        Dim ds As New DataSet
+    ''    Dim strConn As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
+    ''    Dim sqlCmd As SqlCommand
+    ''    Dim sqlConn As New SqlConnection(strConn)
+    ''    Dim sqlDA As New SqlDataAdapter
+    ''    Dim ds As New DataSet
 
-        Dim strSQL As String = "SElECT * FROM tblCustomers WHERE [ID] = " & Session("BID")
 
-        Try
+    ''    Try
 
-            sqlConn.Open()
-            sqlCmd = New SqlCommand(strSQL, sqlConn)
+    ''        sqlConn.Open()
+    ''        sqlCmd = New SqlCommand(strSQL, sqlConn)
 
-            sqlDA.SelectCommand = sqlCmd
-            sqlDA.Fill(ds)
+    ''        sqlDA.SelectCommand = sqlCmd
+    ''        sqlDA.Fill(ds)
 
-        Catch ex As Exception
-            MsgBox("Error")
+    ''    Catch ex As Exception
+    ''        MsgBox("Error")
 
-        Finally
-            sqlDA.Dispose()
-            ds.Dispose()
+    ''    Finally
+    ''        sqlDA.Dispose()
+    ''        ds.Dispose()
 
-            If sqlConn.State = ConnectionState.Open Then
-                sqlConn.Close()
-            End If
+    ''        If sqlConn.State = ConnectionState.Open Then
+    ''            sqlConn.Close()
+    ''        End If
 
-        End Try
+    ''    End Try
 
-        Return ds
+    ''    Return ds
 
-    End Function
+    ''End Function
 
 End Class

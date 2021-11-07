@@ -17,8 +17,8 @@
     <title>Pet Stay</title>
 
     <!-- Links for css, bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />	<!-- edit the file name -->
-    <link href="css/st_george_custom.css" rel="stylesheet" type="text/css" />	<!-- edit the file name -->
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />	<!-- edit the file name -->
+    <link href="st_george_custom.css" rel="stylesheet" type="text/css" />	<!-- edit the file name -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>

@@ -246,6 +246,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="work\GlobalModule.vb" />
     <Compile Include="work\Resualts.aspx.designer.vb">
       <DependentUpon>Resualts.aspx</DependentUpon>
     </Compile>
