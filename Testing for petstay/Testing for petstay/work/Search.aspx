@@ -33,8 +33,8 @@
                                 <asp:ListItem text="Customers" value="2"></asp:ListItem>
                             </asp:DropDownList>--%>
 
-                            <asp:Button runat="server" Text="Pets" ID="btnPets" Width="118px" />
-                            <asp:Button runat="server" Text="Customers" ID="btnCustomers" />
+                            <asp:Button runat="server" Text="Pets" ID="btnPets" Width="118px" AutoPostBack="true" />
+                            <asp:Button runat="server" Text="Customers" ID="btnCustomers" AutoPostBack="true" />
                       </p>
                     </asp:Panel>
                         <asp:Panel ID="srcPets" runat="server" visible="false">
@@ -129,6 +129,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
+
+<script language="text/javascript">  
+   
+    function __doPostBack(eventTarget, eventArgument) {  
+        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {  
+        theForm.__EVENTTARGET.value = eventTarget;  
+        theForm.__EVENTARGUMENT.value = eventArgument;  
+        theForm.submit();  
+    }  
+</script>  
 
 
 <p>

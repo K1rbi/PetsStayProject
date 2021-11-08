@@ -1,8 +1,49 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Configuration
 Public Class Search
     Inherits System.Web.UI.Page
 
+    Dim blnPets As Boolean
+    Dim blnCustomer As Boolean
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim url As String
+        Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
+
+        If IsPostBack = True Then
+            '    Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
+
+            If nameValues.AllKeys.Contains("__VIEWSTATE") Then '__EVENTTARGET
+                'nameValues.Remove("__VIEWSTATE")
+                'nameValues.Remove("__VIEWSTATEGENERATOR")
+                'nameValues.Remove("__EVENTVALIDATION")
+                Dim updatedQueryString As String = "?"
+                url = "/work/Search"
+
+                If nameValues("btnPets") = "Pets" Then
+                    updatedQueryString &= "btnPets=Pets"
+                Else
+                    updatedQueryString &= "btnCustomer=Customer"
+                End If
+
+
+                Response.Redirect(url & updatedQueryString)
+
+            End If
+        End If
+
+        If nameValues.Count = 0 Then
+            blnCustomer = False
+            blnPets = False
+        ElseIf nameValues("btnPets") = "Pets" Then
+            blnPets = True
+            blnCustomer = False
+        Else
+            blnPets = False
+            blnCustomer = True
+        End If
+
+        SwapPanels()
 
     End Sub
 
@@ -21,12 +62,12 @@ Public Class Search
 
 
     Protected Sub btnPets_Click(sender As Object, e As EventArgs) Handles btnPets.Click
-        SwapPanels(True, False)
+        SwapPanels()
 
     End Sub
 
     Protected Sub btnCustomers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
-        SwapPanels(False, True)
+        SwapPanels()
         '        srcPets.Visible = False
         '        srcCustomers.Visible = True
 
@@ -48,9 +89,9 @@ Public Class Search
 
     End Sub
 
-    Protected Function SwapPanels(blnPets As Boolean, blnCustomers As Boolean)
+    Protected Function SwapPanels()
         srcPets.Visible = blnPets
-        srcCustomers.Visible = blnCustomers
+        srcCustomers.Visible = blnCustomer
 
         Return Nothing
     End Function
