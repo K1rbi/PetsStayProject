@@ -43,7 +43,7 @@ Public Class Search
         sqlCmd.Parameters.AddWithValue("ID", ddlOName.SelectedValue)
 
         Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsO") =
+        Session("resultsO") = ds
         Response.Redirect("ResultsO.aspx")
 
     End Sub

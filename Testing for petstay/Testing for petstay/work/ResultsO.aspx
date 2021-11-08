@@ -36,18 +36,24 @@ td {
     border-bottom: 1px solid black;
     border-right: 1px solid black;
 }</style>
+        <form id="form1" runat="server">
         <div class="container">
             <div class="main">
 
                 <h1>Results have been found</h1>
                 <p>
-                   Bellow are the found results
+                
                 </p>
 
                <asp:PlaceHolder ID="plhResultsO" runat="server">
                </asp:PlaceHolder> 
 
-            </div>
 
-        </div>
+            <p>
+                <asp:Button runat="server" Text="Back to Search" ID="btnSearch" />
+
+
+            </p>
+</form>
+
 <%Response.WriteFile("Footer.html") %>
