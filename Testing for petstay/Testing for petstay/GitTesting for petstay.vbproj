@@ -155,6 +155,7 @@
     <Content Include="work\Footer.html" />
     <Content Include="work\Header_Nav.html" />
     <Content Include="work\Resualts.aspx" />
+    <Content Include="work\ResultsO.aspx" />
     <Content Include="work\Search.aspx" />
     <Content Include="work\st_george_custom.css" />
     <Content Include="work\Index.aspx" />
@@ -252,6 +253,13 @@
     </Compile>
     <Compile Include="work\Resualts.aspx.vb">
       <DependentUpon>Resualts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="work\ResultsO.aspx.designer.vb">
+      <DependentUpon>ResultsO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="work\ResultsO.aspx.vb">
+      <DependentUpon>ResultsO.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="work\Search.aspx.designer.vb">

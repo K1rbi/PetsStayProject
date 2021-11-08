@@ -1,4 +1,5 @@
-﻿Public Class Search
+﻿Imports System.Data.SqlClient
+Public Class Search
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -36,8 +37,14 @@
         'plan , find matching data
 
         Dim strSQL As String = "SELECT *  FROM tblCustomers WHERE [ID] LIKE @ID"
-        'Dim sqlCMD As New 
+        'Dim sqlCMD As New  
+        Dim sqlCmd As New SqlCommand(strSQL)
 
+        sqlCmd.Parameters.AddWithValue("ID", ddlOName.SelectedValue)
+
+        Dim ds As DataSet = QueryDataTest(sqlCmd)
+        Session("resultsO") =
+        Response.Redirect("ResultsO.aspx")
 
     End Sub
 
