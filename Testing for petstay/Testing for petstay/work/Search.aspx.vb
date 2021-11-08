@@ -36,7 +36,7 @@
         'plan , find matching data
 
         Dim strSQL As String = "SELECT *  FROM tblCustomers WHERE [ID] LIKE @ID"
-
+        'Dim sqlCMD As New 
 
 
     End Sub

@@ -228,6 +228,12 @@ Public Class WebForm1
         sqlCmd.CommandText = strSQL
         Dim ds As DataSet = QueryDataTest(sqlCmd)
 
+        If ds.Tables(0).Rows.Count > 0 Then
+            Dim intID As Integer = ds.Tables(0).Rows(0).Item(0)
+
+            Session("BID") = intID
+        End If
+
     End Sub
 
 
@@ -250,6 +256,12 @@ Public Class WebForm1
         End With
         sqlCmd.CommandText = strSQL
         Dim ds As DataSet = QueryDataTest(sqlCmd)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            Dim intID As Integer = ds.Tables(0).Rows(0).Item(0)
+
+            Session("PID") = intID
+        End If
 
     End Sub
 
