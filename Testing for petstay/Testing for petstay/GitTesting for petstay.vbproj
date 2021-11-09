@@ -154,8 +154,8 @@
     <Content Include="work\Contact.aspx" />
     <Content Include="work\Footer.html" />
     <Content Include="work\Header_Nav.html" />
-    <Content Include="work\Resualts.aspx" />
     <Content Include="work\ResultsO.aspx" />
+    <Content Include="work\ResultsP.aspx" />
     <Content Include="work\Search.aspx" />
     <Content Include="work\st_george_custom.css" />
     <Content Include="work\Index.aspx" />
@@ -248,18 +248,18 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="work\GlobalModule.vb" />
-    <Compile Include="work\Resualts.aspx.designer.vb">
-      <DependentUpon>Resualts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="work\Resualts.aspx.vb">
-      <DependentUpon>Resualts.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="work\ResultsO.aspx.designer.vb">
       <DependentUpon>ResultsO.aspx</DependentUpon>
     </Compile>
     <Compile Include="work\ResultsO.aspx.vb">
       <DependentUpon>ResultsO.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="work\ResultsP.aspx.designer.vb">
+      <DependentUpon>ResultsP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="work\ResultsP.aspx.vb">
+      <DependentUpon>ResultsP.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="work\Search.aspx.designer.vb">
