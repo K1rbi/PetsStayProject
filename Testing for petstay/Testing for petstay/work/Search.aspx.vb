@@ -3,47 +3,50 @@ Imports System.Configuration
 Public Class Search
     Inherits System.Web.UI.Page
 
-    Dim blnPets As Boolean
-    Dim blnCustomer As Boolean
+    'Dim blnPets As Boolean
+    'Dim blnCustomer As Boolean
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Dim url As String
-        Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
-
-        If IsPostBack = True Then
-            '    Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
-
-            If nameValues.AllKeys.Contains("__VIEWSTATE") Then '__EVENTTARGET
-                'nameValues.Remove("__VIEWSTATE")
-                'nameValues.Remove("__VIEWSTATEGENERATOR")
-                'nameValues.Remove("__EVENTVALIDATION")
-                Dim updatedQueryString As String = "?"
-                url = "/work/Search"
-
-                If nameValues("btnPets") = "Pets" Then
-                    updatedQueryString &= "btnPets=Pets"
-                Else
-                    updatedQueryString &= "btnCustomer=Customer"
-                End If
 
 
-                Response.Redirect(url & updatedQueryString)
+        ' changes has made this redundent 
+        'Dim url As String
+        'Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
 
-            End If
-        End If
+        'If IsPostBack = True Then
+        '    '    Dim nameValues = HttpUtility.ParseQueryString(Request.QueryString.ToString())
 
-        If nameValues.Count = 0 Then
-            blnCustomer = False
-            blnPets = False
-        ElseIf nameValues("btnPets") = "Pets" Then
-            blnPets = True
-            blnCustomer = False
-        Else
-            blnPets = False
-            blnCustomer = True
-        End If
+        '    If nameValues.AllKeys.Contains("__VIEWSTATE") Then '__EVENTTARGET
+        '        'nameValues.Remove("__VIEWSTATE")
+        '        'nameValues.Remove("__VIEWSTATEGENERATOR")
+        '        'nameValues.Remove("__EVENTVALIDATION")
+        '        Dim updatedQueryString As String = "?"
+        '        url = "/work/Search"
 
-        SwapPanels()
+        '        If nameValues("btnPets") = "Pets" Then
+        '            updatedQueryString &= "btnPets=Pets"
+        '        Else
+        '            updatedQueryString &= "btnCustomer=Customer"
+        '        End If
+
+
+        '        Response.Redirect(url & updatedQueryString)
+
+        '    End If
+        'End If
+
+        'If nameValues.Count = 0 Then
+        '    blnCustomer = False
+        '    blnPets = False
+        'ElseIf nameValues("btnPets") = "Pets" Then
+        '    blnPets = True
+        '    blnCustomer = False
+        'Else
+        '    blnPets = False
+        '    blnCustomer = True
+        'End If
+
+        'SwapPanels()
 
     End Sub
 
@@ -62,114 +65,104 @@ Public Class Search
 
 
     Protected Sub btnPets_Click(sender As Object, e As EventArgs) Handles btnPets.Click
-        SwapPanels()
-
+        ' SwapPanels()
+        Response.Redirect("SearchPets.aspx")
     End Sub
 
     Protected Sub btnCustomers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
-        SwapPanels()
+        '  SwapPanels()
         '        srcPets.Visible = False
         '        srcCustomers.Visible = True
-
+        Response.Redirect("SearchOwners.aspx")
     End Sub
 
-    Protected Sub btnOSearch_Click(sender As Object, e As EventArgs) Handles btnOSearch.Click
-        '' pull owner id and search for it , then display
-        'plan , find matching data
+    'vvvv
+    ' past this point has been made redundent
+    '^^^^
 
-        Dim strSQL As String = "SELECT *  FROM tblCustomers WHERE [ID] LIKE @ID"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
 
-        sqlCmd.Parameters.AddWithValue("ID", ddlOName.SelectedValue)
+    'Protected Function SwapPanels()
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsO") = ds
-        Response.Redirect("ResultsO.aspx")
+    '    'srcPets.Visible = blnPets
+    '    'srcCustomers.Visible = blnCustomer
 
-    End Sub
+    '    Return Nothing
+    'End Function
 
-    Protected Function SwapPanels()
-        srcPets.Visible = blnPets
-        srcCustomers.Visible = blnCustomer
+    'Protected Sub BtnPSubmitN_Click(sender As Object, e As EventArgs) Handles BtnPSubmitN.Click
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Name] LIKE CONCAT ('%',@name,'%')"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
 
-        Return Nothing
-    End Function
+    '    sqlCmd.Parameters.AddWithValue("@name", txtPName.Text)
 
-    Protected Sub BtnPSubmitN_Click(sender As Object, e As EventArgs) Handles BtnPSubmitN.Click
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Name] LIKE CONCAT ('%',@name,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
+    'End Sub
 
-        sqlCmd.Parameters.AddWithValue("@name", txtPName.Text)
+    'Protected Sub BtnPSubmitB_Click(sender As Object, e As EventArgs) Handles BtnPSubmitB.Click
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Breed] LIKE CONCAT ('%',@Breed,'%')"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-    End Sub
+    '    sqlCmd.Parameters.AddWithValue("@Breed", txtPBreed.Text)
 
-    Protected Sub BtnPSubmitB_Click(sender As Object, e As EventArgs) Handles BtnPSubmitB.Click
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Breed] LIKE CONCAT ('%',@Breed,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
+    'End Sub
 
-        sqlCmd.Parameters.AddWithValue("@Breed", txtPBreed.Text)
+    'Protected Sub BtnPSubmitL_Click(sender As Object, e As EventArgs) Handles BtnPSubmitL.Click
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Location] LIKE CONCAT ('%',@Loc,'%')"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
+    '    Dim loc As String = ddlPLocationNum.Text & ddlPLocationLetter.Text
+    '    sqlCmd.Parameters.AddWithValue("@Loc", loc)
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-    End Sub
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
+    'End Sub
 
-    Protected Sub BtnPSubmitL_Click(sender As Object, e As EventArgs) Handles BtnPSubmitL.Click
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Location] LIKE CONCAT ('%',@Loc,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
-        Dim loc As String = ddlPLocationNum.Text & ddlPLocationLetter.Text
-        sqlCmd.Parameters.AddWithValue("@Loc", loc)
+    'Protected Sub BtnPSubmitA_Click(sender As Object, e As EventArgs) Handles BtnPSubmitA.Click
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Age] LIKE CONCAT ('%',@Age,'%')"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
+    '    sqlCmd.Parameters.AddWithValue("@Age", txtPAge.Text)
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-    End Sub
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
+    'End Sub
 
-    Protected Sub BtnPSubmitA_Click(sender As Object, e As EventArgs) Handles BtnPSubmitA.Click
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Age] LIKE CONCAT ('%',@Age,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
-        sqlCmd.Parameters.AddWithValue("@Age", txtPAge.Text)
+    'Protected Sub BtnPSubmitO_Click(sender As Object, e As EventArgs) Handles BtnPSubmitO.Click
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Owner] LIKE CONCAT ('%',@Owner,'%')"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
+    '    sqlCmd.Parameters.AddWithValue("@Owner", ddlPOwner.SelectedValue)
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-    End Sub
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
+    'End Sub
 
-    Protected Sub BtnPSubmitO_Click(sender As Object, e As EventArgs) Handles BtnPSubmitO.Click
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Owner] LIKE CONCAT ('%',@Owner,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
-        sqlCmd.Parameters.AddWithValue("@Owner", ddlPOwner.SelectedValue)
+    'Protected Sub BtnPSubmitD_Click(sender As Object, e As EventArgs) Handles BtnPSubmitD.Click
+    '    ' strSQL will need to refernce to colums exit and entry and display both , done to make it easy when searching 
 
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-    End Sub
+    '    ' mock up not final 
+    '    Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Entry] OR [Exit] LIKE @Date"
+    '    'Dim sqlCMD As New  
+    '    Dim sqlCmd As New SqlCommand(strSQL)
 
-    Protected Sub BtnPSubmitD_Click(sender As Object, e As EventArgs) Handles BtnPSubmitD.Click
-        ' strSQL will need to refernce to colums exit and entry and display both , done to make it easy when searching 
+    '    ' need to make this pull date ( curntly dont rember if it is suaced in right order 
+    '    Dim Pdate As Date
 
-        ' mock up not final 
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Entry] OR [Exit] LIKE @Date"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
+    '    sqlCmd.Parameters.AddWithValue("@Date", Pdate)
 
-        ' need to make this pull date ( curntly dont rember if it is suaced in right order 
-        Dim Pdate As Date
+    '    Dim ds As DataSet = QueryDataTest(sqlCmd)
+    '    Session("resultsP") = ds
+    '    Response.Redirect("ResultsP.aspx")
 
-        sqlCmd.Parameters.AddWithValue("@Date", Pdate)
-
-        Dim ds As DataSet = QueryDataTest(sqlCmd)
-        Session("resultsP") = ds
-        Response.Redirect("ResultsP.aspx")
-
-    End Sub
+    'End Sub
 End Class
