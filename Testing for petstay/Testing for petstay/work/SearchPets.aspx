@@ -12,7 +12,17 @@
         border: 1px solid #010c22;
         padding-top: 15px;
     }
-
+    a.Button {
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 5px 14px 5px 14px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
 
 </style>
         <div class="container">
@@ -33,8 +43,10 @@
                                 <asp:ListItem text="Customers" value="2"></asp:ListItem>
                             </asp:DropDownList>--%>
 
-                            <asp:Button runat="server" Text="Customers" ID="btnCustomers" AutoPostBack="true" />
-                      </p>
+                            <%-- <asp:Button runat="server" Text="Customers" ID="btnCustomers" AutoPostBack="true" /> --%>
+                     <a class="Button" href="SearchOwners.aspx"> Owners </a>
+
+                            </p>
                 </asp:Panel>
                         <asp:Panel ID="srcPets" runat="server" visible="True">
                                <p>

@@ -23,7 +23,7 @@ Public Class SearchOwners
 
     End Sub
 
-    Protected Sub btnPets_Click(sender As Object, e As EventArgs) Handles btnPets.Click
-        Response.Redirect("SearchPets.aspx")
-    End Sub
+    'Protected Sub btnPets_Click(sender As Object, e As EventArgs) Handles btnPets.Click
+    '    Response.Redirect("SearchPets.aspx")
+    'End Sub
 End Class

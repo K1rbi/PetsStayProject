@@ -469,15 +469,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Testing_for_petstay.SearchOwners._btnPets">
-<summary>
-btnPets control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:Testing_for_petstay.SearchOwners._srcCustomers">
 <summary>
 srcCustomers control.
@@ -526,15 +517,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:Testing_for_petstay.SearchPets._pnlSearch">
 <summary>
 pnlSearch control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:Testing_for_petstay.SearchPets._btnCustomers">
-<summary>
-btnCustomers control.
 </summary>
 <remarks>
 Auto-generated field.
