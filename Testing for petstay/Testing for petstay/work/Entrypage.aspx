@@ -45,6 +45,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.aspx">Home</a></li>
+                        <li><a href="Entrypage.aspx">Entry</a></li>
                         <li><a href="Search.aspx">Search</a></li>
                         <li><a href="Contact.aspx">Contact</a></li>
                     </ul>

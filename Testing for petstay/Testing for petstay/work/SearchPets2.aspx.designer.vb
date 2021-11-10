@@ -111,13 +111,4 @@ Partial Public Class SearchPets2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents bntSearch As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btn control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btn As Global.System.Web.UI.HtmlControls.HtmlInputButton
 End Class

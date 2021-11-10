@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="SearchPets2.aspx.vb" Inherits="Testing_for_petstay.SearchPets2" %>
+﻿a<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="SearchPets2.aspx.vb" Inherits="Testing_for_petstay.SearchPets2" %>
 
 <%Response.WriteFile("Header_Nav.html") %>
 <style>
@@ -43,7 +43,7 @@
                                </p>
                   </div>
                   <div class="Body">
-                                Name<sup>*</sup>:<br />
+                                Name:<br />
                  <asp:TextBox ID="txtPName" runat="server" Width="300px"></asp:TextBox>
                  <br />
                  <br />
@@ -91,7 +91,7 @@
                                <asp:Calendar ID="CldDate" runat="server"></asp:Calendar>
                                <br />
                                <br />
-                               Search Group<br />
+                   Search Group<br />
                                <asp:DropDownList ID="ddlCat" runat="server">
                                    <asp:ListItem Value="0">Name</asp:ListItem>
                                    <asp:ListItem Value="1">Breed</asp:ListItem>
@@ -100,9 +100,10 @@
                                    <asp:ListItem Value="4">Owner</asp:ListItem>
                                    <asp:ListItem Value="5">Date</asp:ListItem>
                                </asp:DropDownList>
-                               <asp:Button ID="bntSearch" runat="server" Text="Search" Width="100px"/>
-                           <input type="button" runat="server" id="btn" value="Save" onserverclick="IntCheck()" />
-                       </div>
+                               <asp:Button ID="bntSearch" runat="server" Text="Search" Width="100px" />
+                           <%-- <input type="button" runat="server" id="btn" value="Save" onserverclick="IntCheck()" /> --%>
+                       
+                      </div>
                 </form>
             </div>
         </div>

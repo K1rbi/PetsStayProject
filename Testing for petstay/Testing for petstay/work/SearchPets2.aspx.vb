@@ -7,7 +7,7 @@ Public Class SearchPets2
 
     End Sub
 
-    Public Sub IntCheck()
+    Public Function IntCheck()
         Dim cat As Integer = ddlCat.SelectedValue
 
         '0=Name , 1=Breed , 2=Location , 3=Age , 4=Owner , 5=Date
@@ -29,15 +29,16 @@ Public Class SearchPets2
                 MsgBox("error within if for cat")
             End If
         Catch
-            MsgBox("Error with ddl cat")
 
         End Try
-    End Sub
+
+        Return Nothing
+    End Function
 
     Private Sub NameSearch()
-        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Name] LIKE CONCAT ('%',@name,'%')"
-        'Dim sqlCMD As New  
-        Dim sqlCmd As New SqlCommand(strSQL)
+        Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Name] Like CONCAT ('%',@name,'%')"
+            'Dim sqlCMD As New  
+            Dim sqlCmd As New SqlCommand(strSQL)
 
         'Entering value in sql statement
         sqlCmd.Parameters.AddWithValue("@name", txtPName.Text)
@@ -128,6 +129,11 @@ Public Class SearchPets2
         Session("resultsP") = ds
         Response.Redirect("ResultsP.aspx")
 
+
+    End Sub
+
+    Protected Sub bntSearch_Click(sender As Object, e As EventArgs) Handles bntSearch.Click
+        IntCheck()
 
     End Sub
 End Class
