@@ -23,7 +23,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
+
 <body >
+    <style>
+     a.Button {
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 5px 14px 5px 14px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+</style>
     <form id="form1" runat="server">
         <!-- Navigation starts below -->
         <div class="navbar navbar-default" role="navigation">
@@ -46,7 +60,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.aspx">Home</a></li>
                         <li><a href="Entrypage.aspx">Entry</a></li>
-                        <li><a href="Search.aspx">Search</a></li>
+                      <li><a href="SearchPets.aspx">Search Pets</a></li>
+                        <li><a href="SearchOwners.aspx">Search Customers</a></li>
                         <li><a href="Contact.aspx">Contact</a></li>
                     </ul>
                 </div> <!-- End of navbar collapse -->
@@ -60,10 +75,10 @@
 	    <div class="main">
 
 	        <h1>Infomation Entry</h1>
-            <a href="#owner">Onwer </a> <a href="#Pet">Pet </a>
+            <a class="Button" href="#owner">Onwer </a> <a class="Button" href="#Pet">Pet </a>
     <div id="owner">
       
-            <h2>Onwer</h2>
+            <h2>Owner</h2>
                   <p></p>
             <asp:Panel ID="pnlOwnerForm" runat="server">
                 Name<sup>*</sup>:<br />

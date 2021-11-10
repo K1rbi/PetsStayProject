@@ -28,6 +28,7 @@ tr :nth-child(even) {
 }
 
 tr :nth-child(odd) {
+    color:black;
     background-color: #ffffffff;
 }
 
