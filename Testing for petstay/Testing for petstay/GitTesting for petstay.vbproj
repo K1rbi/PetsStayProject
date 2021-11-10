@@ -159,6 +159,7 @@
     <Content Include="work\Search.aspx" />
     <Content Include="work\SearchOwners.aspx" />
     <Content Include="work\SearchPets.aspx" />
+    <Content Include="work\SearchPets2.aspx" />
     <Content Include="work\st_george_custom.css" />
     <Content Include="work\Index.aspx" />
     <Content Include="work\Entrypage.aspx" />
@@ -297,6 +298,13 @@
     </Compile>
     <Compile Include="work\SearchPets.aspx.vb">
       <DependentUpon>SearchPets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="work\SearchPets2.aspx.designer.vb">
+      <DependentUpon>SearchPets2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="work\SearchPets2.aspx.vb">
+      <DependentUpon>SearchPets2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="work\SuccessO.aspx.designer.vb">

@@ -658,6 +658,114 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Testing_for_petstay.SearchPets2._frmMain">
+<summary>
+frmMain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._txtPName">
+<summary>
+txtPName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._txtPBreed">
+<summary>
+txtPBreed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._ddlPLocationLetter">
+<summary>
+ddlPLocationLetter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._ddlPLocationNum">
+<summary>
+ddlPLocationNum control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._txtPAge">
+<summary>
+txtPAge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._ddlPOwner">
+<summary>
+ddlPOwner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._OwnerData">
+<summary>
+OwnerData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._CldDate">
+<summary>
+CldDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._ddlCat">
+<summary>
+ddlCat control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._bntSearch">
+<summary>
+bntSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Testing_for_petstay.SearchPets2._btn">
+<summary>
+btn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Testing_for_petstay.Success._plhDataTableO">
 <summary>
 plhDataTableO control.
