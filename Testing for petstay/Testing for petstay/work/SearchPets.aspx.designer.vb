@@ -149,13 +149,13 @@ Partial Public Class SearchPets
     Protected WithEvents BtnPSubmitO As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''cldPEntery control.
+    '''cldPDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cldPEntery As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents cldPDate As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
     '''BtnPSubmitD control.

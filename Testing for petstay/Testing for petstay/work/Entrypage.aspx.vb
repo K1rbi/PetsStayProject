@@ -83,9 +83,6 @@ Public Class WebForm1
         Dim strPlocation As String = strPLocationLetter + strPLocationNum
 
         ' Dates 
-        ' date is currently out of order 
-        Dim strTempPEntery As String = cldPEntery.SelectedDate
-        Dim strTempPExit As String = cldPExit.SelectedDate
         ' setup for date passing
 
 

@@ -24,6 +24,8 @@
   border-left: 1px solid #CCCCCC;
 }
 
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}
+
 </style>
         <div class="container">
             <div class="main">
@@ -103,8 +105,11 @@
                                 <asp:Button ID="BtnPSubmitO" runat="server" Text="Search" Width="150px" />
                                <br />
                                Date<sup>*</sup>:<br />
-                 <asp:Calendar ID="cldPEntery" runat="server"></asp:Calendar>
+                
+                               <asp:Calendar ID="cldPDate" runat="server" Height="235px" Width="303px"></asp:Calendar>
+                
                                <asp:Button ID="BtnPSubmitD" runat="server" Text="Search" Width="150px" />
+                               <br />
                  <br />
 
                        </asp:Panel> 

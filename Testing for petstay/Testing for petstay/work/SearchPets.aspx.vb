@@ -68,14 +68,17 @@ Public Class SearchPets
     Protected Sub BtnPSubmitD_Click(sender As Object, e As EventArgs) Handles BtnPSubmitD.Click
         ' strSQL will need to refernce to colums exit and entry and display both , done to make it easy when searching 
 
+        ' need to make this pull date ( curntly dont rember if it is suaced in right order 
+        Dim Pdate As Date = cldPDate.SelectedDate
         ' mock up not final 
 
         Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Entry] OR [Exit] LIKE @Date"
         'Dim sqlCMD As New  
         Dim sqlCmd As New SqlCommand(strSQL)
 
-        ' need to make this pull date ( curntly dont rember if it is suaced in right order 
-        Dim Pdate As Date = cldPEntery.SelectedDate
+        ' testing for problems with saucing date 
+
+
 
         sqlCmd.Parameters.AddWithValue("@Date", Pdate)
 
@@ -84,6 +87,8 @@ Public Class SearchPets
         Response.Redirect("ResultsP.aspx")
 
     End Sub
+
+
 
     'Protected Sub btnCustomers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
     '    Response.Redirect("SearchOwners.aspx")
