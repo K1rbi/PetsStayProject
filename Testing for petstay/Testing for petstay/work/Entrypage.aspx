@@ -74,7 +74,7 @@
     <div  class="container">
 	    <div class="main">
 
-	        <h1>Infomation Entry</h1>
+	        <h1>Information Entry</h1>
             <a class="Button" href="#owner">Onwer </a> <a class="Button" href="#Pet">Pet </a>
     <div id="owner">
       
