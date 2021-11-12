@@ -54,17 +54,22 @@
                                <p>
                                    Pets search options
                                </p>
-                        
+                        <div class="one">
                                 Name<sup>*</sup>:<br />
                  <asp:TextBox ID="txtPName" runat="server" Width="300px"></asp:TextBox>
                  <br />
                                <asp:Button ID="BtnPSubmitN" runat="server" Text="Search" Width="150px" />
+                </div>
                  <br />
+                <div class="two">
                  Breed<sup>*</sup>:<br />
                  <asp:TextBox ID="txtPBreed" runat="server" Width="300px"></asp:TextBox>
                  <br />
                                <asp:Button ID="BtnPSubmitB" runat="server" Text="Search" Width="150px" />
+                 </div>
                  <br />
+
+                <div class="one">
                  Location<sup>*</sup>:<br />
                  <asp:DropDownList ID="ddlPLocationLetter" runat="server" Height="16px" Width="73px">
                      <asp:ListItem>A</asp:ListItem>
@@ -89,26 +94,35 @@
 
                                <br />
                                <asp:Button ID="BtnPSubmitL" runat="server" Text="Search" Width="150px" />
+                    </div>
                                <br />
-
+                    <div class="two">
                             Age<sup>*</sup>:<br />
                  <asp:TextBox ID="txtPAge" runat="server" Width="300px" TextMode="Number"></asp:TextBox>
                                <br />
                                <asp:Button ID="BtnPSubmitA" runat="server" Text="Search" Width="150px" />
                                <br />
+                        </div>
                                <br />
+
+                        <div class="one">
                                Owner<sup>*</sup>:<br />
                                <asp:DropDownList ID="ddlPOwner" runat="server" DataSourceID="OwnerData" DataTextField="Name" DataValueField="Id">
                                </asp:DropDownList>
                                 <asp:SqlDataSource ID="OwnerData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name], [Id] FROM [tblCustomers]"></asp:SqlDataSource>
                                 <br />
                                 <asp:Button ID="BtnPSubmitO" runat="server" Text="Search" Width="150px" />
+                            </div>
                                <br />
-                               Date<sup>*</sup>:<br />
+                            <div class="two">
+                               Date<sup>*</sup>:( dd/mm/yyyy)<br />
+                
+                                <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
                 
                                <asp:Calendar ID="cldPDate" runat="server" Height="235px" Width="303px"></asp:Calendar>
                 
                                <asp:Button ID="BtnPSubmitD" runat="server" Text="Search" Width="150px" />
+                                </div>
                                <br />
                  <br />
 

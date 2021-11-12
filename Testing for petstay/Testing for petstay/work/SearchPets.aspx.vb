@@ -69,8 +69,34 @@ Public Class SearchPets
         ' strSQL will need to refernce to colums exit and entry and display both , done to make it easy when searching 
 
         ' need to make this pull date ( curntly dont rember if it is suaced in right order 
+        Dim DTest As New Date
         Dim Pdate As Date = cldPDate.SelectedDate
         ' mock up not final 
+
+        Dim DF As New Date
+        Dim provider As System.Globalization.CultureInfo = System.Globalization.CultureInfo.InvariantCulture
+        Dim TempD() As String = txtDate.Text.Split("/")
+
+        ' if date has is missing 2 digit first add a zero to the front then crompress
+        If Len(TempD(0)) = 1 Then
+
+            TempD(0) = "0" & TempD(0)
+        End If
+        If Len(TempD(1)) = 1 Then
+
+            TempD(1) = "0" & TempD(1)
+        End If
+
+        txtDate.Text = TempD(0) & "/" & TempD(1) & "/" & TempD(2)
+
+        'Dim TempDF As String = String.Join("/", TempD)
+
+        ' checks if date is empty ( caused by bug ) then replaces date with data from text box 
+        If Pdate = DTest Then
+            DF = Date.ParseExact(txtDate.Text, "dd/MM/yyyy", provider)
+        Else
+            DF = Pdate
+        End If
 
         Dim strSQL As String = "SELECT *  FROM tblPets WHERE [Entry] OR [Exit] LIKE @Date"
         'Dim sqlCMD As New  
@@ -80,7 +106,7 @@ Public Class SearchPets
 
 
 
-        sqlCmd.Parameters.AddWithValue("@Date", Pdate)
+        sqlCmd.Parameters.AddWithValue("@Date", DF)
 
         Dim ds As DataSet = QueryDataTest(sqlCmd)
         Session("resultsP") = ds

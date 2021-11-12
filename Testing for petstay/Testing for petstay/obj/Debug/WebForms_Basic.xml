@@ -640,6 +640,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Testing_for_petstay.SearchPets._txtDate">
+<summary>
+txtDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Testing_for_petstay.SearchPets._cldPDate">
 <summary>
 cldPDate control.

@@ -149,6 +149,15 @@ Partial Public Class SearchPets
     Protected WithEvents BtnPSubmitO As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''txtDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''cldPDate control.
     '''</summary>
     '''<remarks>
