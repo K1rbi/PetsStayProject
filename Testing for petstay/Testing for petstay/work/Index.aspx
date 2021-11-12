@@ -9,7 +9,7 @@
 
 	        <h1>Pet Stay Infomation</h1>
 
-            <p> Place holder for infomation about the pet stays oporations</p>
+            <p> Place holder for infomation about the pet stays </p>
              <!-- infomation about the pet stay -->
 	
 	    </div> <!-- Main content end  -->

@@ -34,7 +34,7 @@
                     
                     <asp:Panel ID="pnlSearch" runat="server">
                         <p>
-                            Change catagory
+                            Change category
                         </p>
                         <p>
                           <%--   ddl not working in code how it should
